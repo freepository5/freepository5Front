@@ -6,15 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl='';
+  private apiUrl='http://localhost:3000/users';
 
-  constructor(private http:HttpClient) { 
-
-  }
-
+  constructor(private http:HttpClient) {}
 
   register (userData:any):Observable<any>{
-    return this.http.post(`${this.apiUrl}/register`,userData)
+    return this.http.post(`${this.apiUrl}`,userData)
     
   }
   
@@ -23,17 +20,15 @@ export class AuthService {
 
   }
 
-  getToken():string|null{
+  getToken(): string | null{
     return sessionStorage.getItem('authToken');
   }
 
 isLoggedIn():boolean{
-  return!!this.getToken();
-
+  return !!this.getToken();
 }
 
 logout():void{
   sessionStorage.removeItem('authToken');
-}
-
+  }
 }
