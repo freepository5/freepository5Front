@@ -21,14 +21,14 @@ export class LoginComponent implements OnInit{
     
 ngOnInit(): void {
   this.loginForm=this.formBuilder.group({
-    email:["",Validators.required],
-    password:["",Validators.required]
-  })
+    email:["", [Validators.required, Validators.email]],
+    password:["", [Validators.required, Validators.minLength(10)]]
+  });
   
 }
 
-Submit(){
-  const user={
+Submit(): void{
+  const user:User={
     email:this.loginForm.controls["email"].value,
     password:this.loginForm.controls["password"].value,
   }
@@ -37,16 +37,6 @@ Submit(){
       this.router.navigate(['/home'])
     });
   }
+ }
 }
-}
-
-
-
-
-
-//   if  (this.loginForm.valid){
-//     this.loginService.isLoggedIn(user).subscribe(r=>{
-//       this.router.navigate(['/home'])
-//     });
-//  }
 

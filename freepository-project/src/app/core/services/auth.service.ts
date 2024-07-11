@@ -13,7 +13,7 @@ export class AuthService {
   constructor(private http:HttpClient) {}
 
   register (userData:any):Observable<any>{
-    return this.http.post(`${this.apiUrl}`,userData)
+    return this.http.post(`${this.apiUrl}/register`,userData)
     
   }
   
@@ -26,7 +26,7 @@ export class AuthService {
     return sessionStorage.getItem('authToken');
   }
 
-isLoggedIn(user: User):boolean{
+isLoggedIn(): boolean {
   return !!this.getToken();
 }
 

@@ -26,11 +26,11 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onSubmit(){
+  onSubmit(): void {
     if(this.registerForm.valid){
-      const formData=this.registerForm.value;
+      const userData=this.registerForm.value;
 
-      this.authService.register(formData).subscribe({
+      this.authService.register(userData).subscribe({
         next:(response)=>{
           this.authService.saveToken(response.token);
           window.location.reload();
