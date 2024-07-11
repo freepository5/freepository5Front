@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { User } from '../../shared/models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
   private apiUrl='http://localhost:3000/users';
 
   constructor(private http:HttpClient) {}
@@ -24,11 +26,21 @@ export class AuthService {
     return sessionStorage.getItem('authToken');
   }
 
-isLoggedIn():boolean{
+isLoggedIn(user: User):boolean{
   return !!this.getToken();
 }
 
 logout():void{
   sessionStorage.removeItem('authToken');
+
   }
+
+  login(userData:any):Observable<any>{
+    return this.http.post(`${this.apiUrl}/login`,userData).pipe(
+      map(response=>{
+        return {...response,token:'holaa'};
+      })
+
+    );
+}
 }
