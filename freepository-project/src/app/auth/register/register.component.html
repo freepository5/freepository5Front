@@ -1,24 +1,27 @@
 <app-login></app-login>
 
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<div class="container">
+    <div class="imageRegister">
+    <img src="assets/registerImage.jpg" alt="Image Register">
+    </div>
+    
+ <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="registerForm">
+        <h2>Register</h2>
+        <div class="formContainer">
 
-    <h2>Register</h2>
+        <label for="name">
+            <input type="text" formControlName="name" placeholder="User Name" autocomplete="username">
+        </label>
 
-<label for="name">
-    <input type="text" formControlName="name" placeholder="User Name" autocomplete="username">
-</label>
+        <label for="email">
+            <input type="email" formControlName="email" placeholder="Email" autocomplete="email">
+        </label>
 
-<label for="email">
-    <input type="email" formControlName="email" placeholder="Email" autocomplete="email">
-</label>
+        <label for="password">
+            <input type="password" formControlName="password" placeholder="Password" autocomplete="current-password">
+        </label>
 
-<label for="password">
-    <input type="password" formControlName="password" placeholder="Password" autocomplete="current-password">
-</label>
-
-<button type="submit">Sign in</button>
-
-</form>
-
-
-
+        <button type="submit">Sign in</button>
+        </div>
+ </form>
+</div>
