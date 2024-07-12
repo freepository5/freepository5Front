@@ -1,0 +1,31 @@
+.header{
+    background-color: #4211ba;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    width: 100px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+button {
+    padding: 10px;
+ border: none;
+ border-radius: 20px;
+ background-color: #FFA500;
+ color: #fff;
+ cursor: pointer;
+}
+  
+button:hover {
+ background-color: #FF8C00;
+ }
+
+  
