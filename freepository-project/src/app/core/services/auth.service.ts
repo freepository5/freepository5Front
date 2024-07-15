@@ -19,7 +19,6 @@ export class AuthService {
   
   saveToken(token:string):void{
     sessionStorage.setItem('authToken',token);
-
   }
 
   getToken(): string | null{
