@@ -1,13 +1,12 @@
 <app-login></app-login>
-
-<div class="container">
+<div class="registercontainer">
     <div class="imageRegister">
-    <img src="assets/registerImage.jpg" alt="Image Register">
+        <img src="assets/registerImage.jpg" alt="Image Register">
     </div>
-    
- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="registerForm">
-        <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="registerForm">
+        <h2 class="registerText">Register</h2>
         <div class="formContainer">
+        </div>
 
         <label for="name">
             <input type="text" formControlName="name" placeholder="User Name" autocomplete="username">
@@ -22,6 +21,6 @@
         </label>
 
         <button type="submit">Sign in</button>
-        </div>
- </form>
+    </form>
 </div>
+

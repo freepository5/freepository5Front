@@ -1,5 +1,22 @@
-html{
+@mixin center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    padding: 0;
+    overflow: hidden;
     background-color: #4211ba;
-    height: 100vh;
+    height: 110vh;
     margin: 0;
+    font-family: "Poppins";
+
+}
+.appRoot{
+    display: block;
+    height: 100vh;
+}
+
+.app-principal{
+    height: 100%;
 }

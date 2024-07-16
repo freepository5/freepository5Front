@@ -1,50 +1,56 @@
 
+.registercontainer {
+  display: flex;
+  align-items: center;
 
-.container {
-    display: flex;
-    align-items: center;
-    position: relative;
 }
 
-h2 {
-    color: #FF5722;
-    font-size: 35px;
-    margin-bottom: 5px;
-    text-align: center;
-  }
+.registerText {
+  color: #ff5722;
+  font-size: 35px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
 .registerForm {
-    width: 60%;
-    padding: 100px;
-    display: flex;
-    flex-direction: column;
-    background-color: #D7D7D7;
+  width: 87%;
+  padding: 54px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d7d7d7;
+  margin-bottom: 25px;
 }
 
-input {
-    width: 100%; 
-      padding: 15px;
-      margin: 10px 0; 
-      border: 1px solid #ccc;
-      box-sizing: border-box;
+.registerForm input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
-  
-button {
-    width: 50%;
-    padding: 15px;
-    border: none;
-    font-size: 15px;
-    background-color: #FF5722;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px auto; 
-    display: block;
-  }
-  
-button:hover {
-    background-color: #FF8C00;
+
+.registerForm button {
+  width: 50%;
+  padding: 15px;
+  border: none;
+  font-size: 15px;
+  background-color: #ff5722;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.registerForm button:hover {
+  background-color: #ff8c00;
 }
 
 .imageContainer {
-    position: absolute;
+  position: absolute;
+} 
+
+.imageRegister img {
+  width: 36rem;
+  height: 30rem;
+  margin-bottom: 20px;
 }

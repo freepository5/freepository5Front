@@ -1,0 +1,29 @@
+:host{
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
+.app-header{
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    
+}
+.principalHeader{
+    height: 120px;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width:210px;
+    height:120px;
+    margin-left: -30px;
+}
+.userIcon{
+    padding-top: 20px;
+    width:60px;
+    height:60px;
+}

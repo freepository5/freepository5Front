@@ -3,20 +3,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100px;
 }
 
 img {
-    width: 100px;
+    width: 200px;
+    height:120px;
 }
 
 input {
     padding: 10px;
-    margin-bottom: 15px;
     border-radius: 20px;
+    margin-right: 20px;
+    
 }
 
-button {
-    padding: 10px;
+.login {
+    margin-right: 40px;
+padding: 10px;
  border: none;
  border-radius: 20px;
  background-color: #FFA500;
@@ -28,4 +32,13 @@ button:hover {
  background-color: #FF8C00;
  }
 
-  
+  .remember{
+    display:flex;
+    font-size: 16px;
+    margin-top:20px;
+
+
+  }
+  .box{
+    size:100px;
+  }

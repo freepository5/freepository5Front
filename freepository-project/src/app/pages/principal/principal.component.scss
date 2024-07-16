@@ -1,0 +1,84 @@
+:host{
+    height: 100%;
+
+    margin:0 auto;
+    display:block;
+    
+}
+.app-principal{
+    height: 100%;
+}
+.mainPrincipal{
+    height: calc(100vh - 120px)
+}
+
+ul, p, h1 {
+    margin:0;
+    padding:0;
+}
+
+.mainSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:60%;
+
+}
+
+.lens{
+    width:16px;
+    height:16px;
+}
+.mainSection span{
+    font-size:7vh;
+    font-weight: 600;
+}
+
+.mainSection .userMessage{
+    color:white;
+    
+
+}
+.mainSection .welcomeMessage{
+    color:#ff5722;
+}
+
+.searchMessage{
+    color:white;
+    font-size:3vh;
+    font-weight: 200;
+    margin-top: 2rem;
+
+}
+.bootcamps{
+    height:40%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searcher{
+    display:flex;
+    justify-content: center;
+    width:20%;
+    border:3.5px solid #ff5722;
+    border-radius: 50px;
+    height:6vh;
+    align-items: center;
+
+
+}
+.searcher input{
+    display:flex;
+    width:84%;
+    height:70%;
+    background-color: transparent;
+    border:none;
+    outline: none;
+}
+.searcher .lens{
+
+    width:16px;
+    height:16px;
+}
+
