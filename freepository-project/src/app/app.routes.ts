@@ -7,32 +7,29 @@ import { ProgramComponent } from './pages/program/program.component';
 import { RoadmapComponent } from './pages/roadmap/roadmap.component';
 
 export const routes: Routes = [
-
+    
     { path: '',
-    component: RegisterComponent,
+        component: RegisterComponent,
     },
 
     { path: 'register',
-    component: RegisterComponent,
+        component: RegisterComponent,
     },
-
-
+    
+    
     { path: 'login',
-    component: LoginComponent,
+        component: LoginComponent,
     },
-
-    //  { path: '**',
-    // redirectTo: 'register',
-    // pathMatch: 'full',
-    // },
+    
     {
         path:'principal',
-        component:PrincipalComponent
+        component:PrincipalComponent,
     },
-   {
+    {
     path:'programs',
     component:ProgramsComponent
-   },
+},
+
    {
    path:'program',
    component:ProgramComponent
