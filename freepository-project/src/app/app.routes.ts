@@ -3,6 +3,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { ProgramsComponent } from './pages/programs/programs.component';
+import { ProgramComponent } from './pages/program/program.component';
+import { RoadmapComponent } from './pages/roadmap/roadmap.component';
 
 export const routes: Routes = [
 
@@ -31,5 +33,13 @@ export const routes: Routes = [
     path:'programs',
     component:ProgramsComponent
    },
+   {
+   path:'program',
+   component:ProgramComponent
+},
+{
+    path:'roadmap',
+    component:RoadmapComponent
+}
 ];
 

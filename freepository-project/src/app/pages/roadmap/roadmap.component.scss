@@ -1,3 +1,4 @@
+
 :host{
     height: 110%;
     margin: 0 auto;
@@ -10,14 +11,6 @@
 
 }
 
-.titleBox{
-    display: flex;
-    flex-direction: column;
-    color:white;
-    margin-left: 40px;
-    margin-top: 40px;
-    }
-
 h2{
     font-size:39px;
     font-weight: 200;
@@ -26,14 +19,55 @@ h2{
 h4{
     font-size: 24px;
     }
+
+    .subTitles h3{
+        font-size:24px;
+        font-weight: 200;
+        cursor: pointer;
+    }
+
+    .clicked {
+        color: #ff5722;
+    }
 h3{
     font-size:24px;
+    font-weight: 200;
 }
 
+h3:hover{
+    color:#ff5722;
+
+}
+.titleBox{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    margin-left: 40px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 2rem;    
+}
+
+.subTitles{
+    display: flex;
+    max-width: 35%;
+    justify-content: space-evenly;
+    color:white;
+    margin: 1em;
+
+}
+
+h2{
+    font-weight: 200;
+    margin:none;
+    
+
+}
 hr{
     border: none;
     height: 4px;
     background-color:#ff5722;
+    
 }
 
 .box1, .box2{
