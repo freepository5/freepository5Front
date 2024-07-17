@@ -1,84 +1,93 @@
 :host{
     height: 100%;
-
-    margin:0 auto;
-    display:block;
-    
+    margin: 0 auto;
+    display: block;
 }
+
 .app-principal{
-    height: 100%;
-}
-.mainPrincipal{
-    height: calc(100vh - 120px)
+    height: 100vh;
 }
 
-ul, p, h1 {
-    margin:0;
-    padding:0;
+main{
+    height: calc(100vh - 120px);
 }
 
-.mainSection{
+h1, h2, h3, h4, h5, h6, b, p {
+    margin: 0;
+    padding: 0;
+}
+
+section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:60%;
-
+    height: 50%;
 }
 
-.lens{
-    width:16px;
-    height:16px;
-}
-.mainSection span{
-    font-size:7vh;
+section h1, b{
+    font-size: 7vh;
     font-weight: 600;
 }
-
-.mainSection .userMessage{
-    color:white;
-    
-
-}
-.mainSection .welcomeMessage{
-    color:#ff5722;
+ 
+section h1{
+    color: white;    
 }
 
-.searchMessage{
+
+section b{
+    color: #ff5722;
+}
+
+.boxes{
+    height: 40%;
+    max-width: 95%; 
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box{
+
+
+}
+
+
+
+.searcher{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.searcher p{
     color:white;
     font-size:3vh;
     font-weight: 200;
     margin-top: 2rem;
-
-}
-.bootcamps{
-    height:40%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.searcher{
-    display:flex;
-    justify-content: center;
-    width:20%;
-    border:3.5px solid #ff5722;
-    border-radius: 50px;
-    height:6vh;
-    align-items: center;
-
-
+    text-align: center;
+ 
 }
 .searcher input{
-    display:flex;
-    width:84%;
-    height:70%;
+    color: white;
+    border: 3.5px solid #ff5722;
+    border-radius: 50px;
+    padding-inline: 1rem;
+    width: 25vw;
+    height: 7.5vh;
     background-color: transparent;
-    border:none;
+    font-size:3vh;
+    font-weight: 200;
     outline: none;
-}
-.searcher .lens{
+    text-align: center;
+    margin-top: 0.5em;
 
-    width:16px;
-    height:16px;
+}
+
+.searcher input::placeholder {
+    text-align: center; 
+    color: rgba(255, 255, 255, 0.301); 
+    opacity: 1;
 }
 
