@@ -1,4 +1,3 @@
-<app-header></app-header>
 <main>
     <section>
             <h1>Bienvenida Yeraldine</h1>
@@ -10,7 +9,15 @@
             </div>
     </section>
     <div  class="boxes">
-        <div class="box1" routerLink="/principal/programs/">
+        @for (bootcamp of bootcamps; track $index) {
+            <div class="bootcampCard" routerLink="/principal/programs/">
+                <h4>{{bootcamp.type}}</h4> 
+                <h2>{{bootcamp.title}}</h2>
+            </div>
+        }
+
+
+        <!-- <div class="box1" routerLink="/principal/programs/">
             <h4>BOOTCAMP</h4> 
             <h2>Full Stack</h2>
         </div>
@@ -25,6 +32,6 @@
         <div class="box4">
             <h4>BOOTCAMP</h4> 
             <h2>Cloud Services</h2>
-        </div>
+        </div> -->
     </div>
 </main>

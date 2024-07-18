@@ -1,12 +1,12 @@
-<app-header></app-header>
 <main>	
 	<section class="titleBox">
 		<h4>Full Stack</h4>		
 		<h2>Programas</h2>
 	</section>
 	<hr>	
-	<section class=boxes>
-		<h3 class="box1">Singulars</h3>
-		<h3 class="box2">Femcoders</h3>	
-	</section>
-</main>
+	<div class=boxes>
+		@for (studyprogram of studyPrograms; track $index) {
+            <div class="box" routerLink="/programs/roadmap/">
+                <h2>{{studyprogram.title}}</h2>
+			</div>
+		}
