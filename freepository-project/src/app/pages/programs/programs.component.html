@@ -1,12 +1,6 @@
-<main>	
-	<section class="titleBox">
-		<h4>Full Stack</h4>		
-		<h2>Programas</h2>
-	</section>
-	<hr>	
-	<div class=boxes>
-		@for (studyprogram of studyPrograms; track $index) {
-            <div class="box" routerLink="/programs/roadmap/">
-                <h2>{{studyprogram.title}}</h2>
-			</div>
-		}
+<section class="titleBox">
+    <h4>Full Stack</h4>
+    <h2>Programas</h2>
+</section>
+<hr>
+<app-programs-list></app-programs-list>

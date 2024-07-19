@@ -1,19 +1,21 @@
 import { Routes } from '@angular/router';
-import { PrincipalComponent } from './pages/principal/principal.component';
 import { ProgramsComponent } from './pages/programs/programs.component';
-import { ProgramComponent } from './pages/program/program.component';
 import { LayoutComponent } from './layout/layout/layout.component';
-import { RoadmapComponent } from './pages/roadmap/roadmap.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProgramsListComponent } from './pages/programs/programs-list/programs-list.component';
+import { PromotionsComponent } from './pages/promotions/promotions.component';
+import { PromotionsListComponent } from './pages/promotions/promotions-list/promotions-list.component';
 
 export const routes: Routes = [
     {path:'',
         component:LayoutComponent,
         children:[
-            {path:'principal', redirectTo:'' },
-            {path:'', component:PrincipalComponent,  },
-            {path:'programs',component:ProgramsComponent},
-            {path:'program',component:ProgramComponent},
-            {path:'roadmap', component:RoadmapComponent},
+            {path:'home', redirectTo:'' },
+            {path:'', component:HomeComponent,  },
+            {path:'programs',component:ProgramsComponent,},
+            {path:'programs',component:ProgramsListComponent},
+            {path:'promotions',component:PromotionsComponent},
+             {path:'promotions', component:PromotionsListComponent},
         ]}];
 
 

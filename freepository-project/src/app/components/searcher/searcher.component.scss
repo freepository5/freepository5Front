@@ -1,0 +1,33 @@
+.searcher{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searcher p{
+    color:white;
+    font-size: 15px;
+    font-weight: 200;
+    margin-top: 1rem;
+    text-align: center;
+}
+.searcher input{
+    color: white;
+    border: 3.5px solid #FF5722;
+    border-radius: 50px;
+    padding-inline: 1rem;
+    width: 25vw;
+    height: 7.5vh;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 200;
+    outline: none;
+    text-align: center;
+    margin-top: 0.5em;
+}
+.searcher input::placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.404);
+    opacity: 1;
+    font-size: 24px;
+}

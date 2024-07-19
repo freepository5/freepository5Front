@@ -1,0 +1,33 @@
+.boxes{
+    height: 20%;
+    max-width: 98%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+}
+.bootcampCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem ;
+    background-color: rgba(53, 53, 53, 0.2);
+    border-radius: 10px;
+    width:14rem;
+    height: 5rem;
+}
+.bootcampCard h4,h2{
+    width: 30%;
+}
+.bootcampCard h2{
+    font-size: 24px ;
+    font-weight: 200;
+}
+.bootcampCard h4{
+    font-size: 15px ;
+    font-weight: 700;
+}
+.bootcampCard:hover {
+    color: rgba(255, 86, 34, 0.966);
+}
