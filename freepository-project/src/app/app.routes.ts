@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProgramsListComponent } from './pages/programs/programs-list/programs-list.component';
 import { PromotionsComponent } from './pages/promotions/promotions.component';
 import { PromotionsListComponent } from './pages/promotions/promotions-list/promotions-list.component';
+import { ModuleFormComponent } from './components/forms/module-form/module-form.component';
 
 export const routes: Routes = [
     {path:'',
