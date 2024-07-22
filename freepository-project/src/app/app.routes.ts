@@ -15,7 +15,7 @@ export const routes: Routes = [
             {path:'programs',component:ProgramsComponent,},
             {path:'programs',component:ProgramsListComponent},
             {path:'promotions',component:PromotionsComponent},
-             {path:'promotions', component:PromotionsListComponent},
+            {path:'promotions', component:PromotionsListComponent},
         ]}];
 
 
