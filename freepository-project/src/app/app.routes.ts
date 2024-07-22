@@ -8,6 +8,8 @@ import { PromotionsListComponent } from './pages/promotions/promotions-list/prom
 import { ModuleFormComponent } from './components/forms/module-form/module-form.component';
 import { RoadmapsComponent } from './pages/roadmaps/roadmaps.component';
 import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-list.component';
+import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
+import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';
 
 export const routes: Routes = [
     {path:'',
@@ -21,6 +23,10 @@ export const routes: Routes = [
             {path:'promotions', component:PromotionsListComponent},
             {path:'roadmaps',component:RoadmapsComponent},
             {path:'roadmaps', component:RoadmapsListComponent},
+            {path: 'module-form', component:ModuleFormComponent},
+            {path: 'roadmap-form', component:RoadmapFormComponent},
+            {path: 'resurce-form', component: ResourceFormComponent},
+            
         ]}];
 
 

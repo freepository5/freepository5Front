@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Prom } from '../../../shared/models/prom';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-promotions-list',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterModule],
   templateUrl: './promotions-list.component.html',
   styleUrl: './promotions-list.component.scss'
 })

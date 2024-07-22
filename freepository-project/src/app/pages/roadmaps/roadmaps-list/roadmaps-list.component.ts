@@ -5,7 +5,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-roadmaps-list',
   standalone: true,
-  imports: [RouterLink,RouterModule],
+  imports: [RouterLink, RouterModule],
   templateUrl: './roadmaps-list.component.html',
   styleUrl: './roadmaps-list.component.scss'
 })
