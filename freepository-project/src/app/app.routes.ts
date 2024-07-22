@@ -6,6 +6,8 @@ import { ProgramsListComponent } from './pages/programs/programs-list/programs-l
 import { PromotionsComponent } from './pages/promotions/promotions.component';
 import { PromotionsListComponent } from './pages/promotions/promotions-list/promotions-list.component';
 import { ModuleFormComponent } from './components/forms/module-form/module-form.component';
+import { RoadmapsComponent } from './pages/roadmaps/roadmaps.component';
+import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-list.component';
 
 export const routes: Routes = [
     {path:'',
@@ -17,6 +19,8 @@ export const routes: Routes = [
             {path:'programs',component:ProgramsListComponent},
             {path:'promotions',component:PromotionsComponent},
             {path:'promotions', component:PromotionsListComponent},
+            {path:'roadmaps',component:RoadmapsComponent},
+            {path:'roadmaps', component:RoadmapsListComponent},
         ]}];
 
 

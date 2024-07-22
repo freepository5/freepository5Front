@@ -1,0 +1,8 @@
+<section class="boxes">
+    @for (roadmap of roadmaps; track $index) {
+        <div class="box" routerLink="">
+            <h3 class="title">{{roadmap.title}}</h3>
+        </div>
+    }
+    <button class="addNew">Añadir nuevo +</button>
+</section>
