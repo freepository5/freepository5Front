@@ -17,8 +17,6 @@ export const routes: Routes = [
             {path:'programs',component:ProgramsListComponent},
             {path:'promotions',component:PromotionsComponent},
             {path:'promotions', component:PromotionsListComponent},
-            {path: 'module-form', component:ModuleFormComponent}
-
         ]}];
 
 
