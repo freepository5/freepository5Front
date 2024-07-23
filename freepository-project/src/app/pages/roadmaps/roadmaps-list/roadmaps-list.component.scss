@@ -1,8 +1,17 @@
-.boxes{
+:host{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 60px;
+    align-items: center;
+    height: 50%;
+}
+
+
+section{
+    display: flex;
+    align-items: space-between;
+    justify-content: space-evenly;
+    width: 70%;
 }
 
 
@@ -16,22 +25,21 @@
     width:15rem;
     height:8rem;
     color:white;
-    font-weight: 300;
 }
 
+button{
+    background-color: #FF5722;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    width: 20%;
+    font-size: 1.5rem;
+}
 
-// <section class="boxes">
-//     @for (roadmap of roadmaps; track $index) {
-//         <div class="box" routerLink="/roadmaps/">
-//             <h3 class="title">{{roadmap.title}}</h3>
-//         </div>
-//     }
-// </section>
-
-// <!-- <section class="boxesSection">
-//     <div class="boxes">
-//         <div class="box1"><h3>Frontend con Angular</h3></div>
-//         <div class="box2"><h3>Backend con C# y .net</h3></div>
-//     </div>	
-// </section>
-// <button class="addNew">Añadir nuevo +</button> -->
+h3{
+    font-weight: 200;
+    font-size: 24px;
+    text-align: center;
+}
