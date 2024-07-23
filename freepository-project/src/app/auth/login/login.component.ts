@@ -13,9 +13,7 @@ import { User } from '../../shared/models/user';
 })
 export class LoginComponent implements OnInit{
   private loginService=inject(AuthService);
-  private authService=inject(AuthService);
   private formBuilder=inject (FormBuilder);
-  router =inject(Router);
   loginForm!:FormGroup;
  
     
@@ -33,9 +31,7 @@ Submit(): void{
     password:this.loginForm.controls["password"].value,
   }
   if(this.loginForm.valid){
-    this.loginService.login(user).subscribe(r=>{
-      this.router.navigate(['/home'])
-    });
+    this.loginService.login(user);
   }
  }
 }

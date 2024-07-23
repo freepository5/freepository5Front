@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { catchError, Observable, tap } from 'rxjs';
 import { User } from '../../shared/models/user';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
- url = 'http://localhost:3000/users'
+ url = environment.API_URL;
  loginUrl = 'http://localhost:3000/users/login'
  private http = inject(HttpClient);
 
