@@ -1,0 +1,7 @@
+<div  class="boxes">
+    @for (bootcamp of bootcamps; track $index) {
+        <div class="bootcampCard" routerLink="/home/programs/">
+            <h4>{{bootcamp.type}}</h4>
+            <h2>{{bootcamp.title}}</h2>
+        </div>
+    }
