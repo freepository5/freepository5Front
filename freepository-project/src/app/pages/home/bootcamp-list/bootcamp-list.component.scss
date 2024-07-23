@@ -1,21 +1,12 @@
-.boxes{
-    height: 20%;
-    max-width: 98%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color:white;
-}
 .bootcampCard{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1.5rem ;
+    padding: 1.2rem ;
     background-color: rgba(53, 53, 53, 0.2);
     border-radius: 10px;
-    width:14rem;
-    height: 5rem;
+    width:12rem;
+    height: 7rem;
 }
 .bootcampCard h4,h2{
     width: 30%;

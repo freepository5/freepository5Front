@@ -1,12 +1,21 @@
-<form>
-    <header>
-        <nav>
-            <h3>Agregar título</h3>
-            <button><img src="../../../../assets/icons8-close-button-32.png" alt="Close button"/></button>
-        </nav>
-        <hr>
-    </header>
-    <input class="writeInput" type="text" placeholder="Escribe aquí el titulo del módulo"/>
-    <input class="submitInput" type="submit" value="Guardar"/>
-</form>
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modalHeader">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir titulo</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
+        <div class="modalBody">
+            <input type="text" class="moduleTitle" placeholder="Titulo">
+        </div>
+        <div class="modalFooter">
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+      

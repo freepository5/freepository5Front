@@ -10,6 +10,8 @@ import { RoadmapsComponent } from './pages/roadmaps/roadmaps.component';
 import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-list.component';
 import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
 import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';
+import { ModuleComponent } from './pages/modules/module/module.component';
+
 
 export const routes: Routes = [
     {path:'',
@@ -21,44 +23,13 @@ export const routes: Routes = [
             {path:'programs',component:ProgramsListComponent},
             {path:'promotions',component:PromotionsComponent},
             {path:'promotions', component:PromotionsListComponent},
-            {path:'roadmaps',component:RoadmapsComponent},
-            {path:'roadmaps', component:RoadmapsListComponent},
+            {path:'modules', component:ModuleComponent},
+            // {path:'roadmaps',component:RoadmapsComponent},
+            // {path:'roadmaps', component:RoadmapsListComponent},
             {path: 'module-form', component:ModuleFormComponent},
             {path: 'roadmap-form', component:RoadmapFormComponent},
             {path: 'resurce-form', component: ResourceFormComponent},
             
-        ]}];
-
-
-//     { path: '',
-//         component: RegisterComponent,
-//     },
-
-//     { path: 'register',
-//         component: RegisterComponent,
-//     },
-    
-    
-//     { path: 'login',
-//         component: LoginComponent,
-//     },
-    
-//     {
-//         path:'principal',
-//         component:PrincipalComponent,
-//     },
-//     {
-//     path:'programs',
-//     component:ProgramsComponent
-// },
-
-//    {
-//    path:'program',
-//    component:ProgramComponent
-// },
-// {
-//     path:'roadmap',
-//     component:RoadmapComponent
-// }
-
-
+        ]
+    }
+];
