@@ -10,14 +10,23 @@ body {
     height: 110vh;
     margin: 0;
     font-family: "Poppins";
-
+    
 }
+
+body, input{ 
+    font-size: 16px;
+}
+
+button {
+    font-size: 1rem;
+}
+
+
 .appRoot{
-    display: block;
-    height: 100vh;
+    height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, b, p {
+h1, h2, h3, h4, h5, h6, b, p, input {
     margin: 0;
     padding: 0;
 }
