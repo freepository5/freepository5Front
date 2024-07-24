@@ -60,14 +60,14 @@ main{
     align-items: center;
 }
 
-.fileContainer {
+main div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.custom-file-upload {
+main div label {
     background-color: #4211BA;
     color: #ffffff;
     border-radius: 25px;
@@ -77,7 +77,7 @@ main{
     text-align: center;
 }
 
-.uploadFile {
+main div input {
     display: none;
 }
 
