@@ -9,14 +9,6 @@ import { SearcherComponent } from "../../components/searcher/searcher.component"
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit{
-  showSearcher: boolean = true;
-
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-    this.router.events.subscribe(() => {
-      this.showSearcher = this.router.url !== 'home';
-    });
-  }
+export class HeaderComponent{
+  
 }
