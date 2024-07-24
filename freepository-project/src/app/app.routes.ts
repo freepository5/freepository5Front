@@ -11,12 +11,15 @@ import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-l
 import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
 import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';
 import { ModuleComponent } from './pages/modules/module/module.component';
+import { registerLocaleData } from '@angular/common';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 export const routes: Routes = [
     {path:'',
         component:LayoutComponent,
         children:[
+            {path:'register', component:RegisterComponent},
             {path:'home', redirectTo:'' },
             {path:'', component:HomeComponent,  },
             {path:'programs',component:ProgramsComponent,},
