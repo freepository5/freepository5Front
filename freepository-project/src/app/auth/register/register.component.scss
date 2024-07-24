@@ -1,56 +1,65 @@
-
-.registercontainer {
-  display: flex;
-  align-items: center;
-
+:host{
+  display: block;
 }
 
-.registerText {
+main {
+  display: flex;
+  height: 70vh;
+}
+
+form h2 {
   color: #ff5722;
-  font-size: 35px;
-  margin-bottom: 5px;
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 400;
   text-align: center;
 }
 
-.registerForm {
-  width: 87%;
+form {
+  width: 55%;
   padding: 54px;
   display: flex;
   flex-direction: column;
   background-color: #d7d7d7;
-  margin-bottom: 25px;
 }
 
-.registerForm input {
+form input {
+  display: block;
+  max-width: 70%;
   width: 100%;
   padding: 15px;
-  margin: 10px 0;
+  margin: 10px auto;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-size: 1.25em;
 }
 
-.registerForm button {
-  width: 50%;
+form button {
+  width: 70%;
   padding: 15px;
   border: none;
-  font-size: 15px;
   background-color: #ff5722;
   color: #fff;
   cursor: pointer;
   margin: 20px auto;
   display: block;
+  font-size: 1.25em;
+
 }
 
-.registerForm button:hover {
+form button:hover {
   background-color: #ff8c00;
 }
 
-.imageContainer {
-  position: absolute;
-} 
+main section{
+  width: 45%;
+}
 
-.imageRegister img {
-  width: 36rem;
-  height: 30rem;
-  margin-bottom: 20px;
+main section img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: 38% 27%;
+  filter: grayscale(0.9);
+
 }

@@ -1,24 +1,30 @@
-.bootcampCard{
+.boxes{
+    max-width: 98%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    color:white;
+}
+.bootcampCard {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 1.2rem ;
+    padding: 1em 2em ;
+    margin-inline: .25em;
     background-color: rgba(53, 53, 53, 0.2);
-    border-radius: 10px;
-    width:12rem;
-    height: 7rem;
+    border-radius: 1em;
+    width:14rem;
+    font-size: 1.5em;
 }
-.bootcampCard h4,h2{
-    width: 30%;
-}
+
 .bootcampCard h2{
-    font-size: 24px ;
-    font-weight: 200;
+    font-weight: 600;
+    line-height: 1.1em;
 }
 .bootcampCard h4{
-    font-size: 15px ;
-    font-weight: 700;
+    font-weight: 200;
 }
 .bootcampCard:hover {
     color: rgba(255, 86, 34, 0.966);
 }
+

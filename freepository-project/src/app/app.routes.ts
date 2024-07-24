@@ -9,9 +9,7 @@ import { ModuleFormComponent } from './components/forms/module-form/module-form.
 import { RoadmapsComponent } from './pages/roadmaps/roadmaps.component';
 import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-list.component';
 import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
-import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';
-import { ModuleComponent } from './pages/modules/module/module.component';
-import { registerLocaleData } from '@angular/common';
+import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';import { ModuleComponent } from './pages/modules/module/module.component';
 import { RegisterComponent } from './auth/register/register.component';
 
 
@@ -31,7 +29,9 @@ export const routes: Routes = [
             // {path:'roadmaps', component:RoadmapsListComponent},
             {path: 'module-form', component:ModuleFormComponent},
             {path: 'roadmap-form', component:RoadmapFormComponent},
-            {path: 'resurce-form', component: ResourceFormComponent},
+            {path: 'resource-form', component: ResourceFormComponent},
+            { path: 'register',component: RegisterComponent,
+            },
             
         ]
     }
