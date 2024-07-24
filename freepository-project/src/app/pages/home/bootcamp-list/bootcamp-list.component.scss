@@ -1,5 +1,5 @@
 .boxes{
-    max-width: 98%;
+    max-width: 80%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -7,19 +7,17 @@
     color:white;
 }
 .bootcampCard {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 2em ;
+    padding: 1em 2em;
     margin-inline: .25em;
     background-color: rgba(53, 53, 53, 0.2);
     border-radius: 1em;
-    width:14rem;
-    font-size: 1.5em;
+    font-size: 2em;
+    flex-grow: 1; 
+    flex-basis: 0; 
 }
 
 .bootcampCard h2{
-    font-weight: 600;
-    line-height: 1.1em;
+    font-weight: 500;
 }
 .bootcampCard h4{
     font-weight: 200;
