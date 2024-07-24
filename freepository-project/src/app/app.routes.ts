@@ -10,6 +10,7 @@ import { RoadmapsComponent } from './pages/roadmaps/roadmaps.component';
 import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-list.component';
 import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
 import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 export const routes: Routes = [
     {path:'',
@@ -25,14 +26,13 @@ export const routes: Routes = [
             {path:'roadmaps', component:RoadmapsListComponent},
             {path: 'module-form', component:ModuleFormComponent},
             {path: 'roadmap-form', component:RoadmapFormComponent},
-            {path: 'resurce-form', component: ResourceFormComponent},
+            {path: 'resource-form', component: ResourceFormComponent},
+            { path: 'register',component: RegisterComponent,
+            },
             
         ]}];
 
 
-//     { path: '',
-//         component: RegisterComponent,
-//     },
 
 //     { path: 'register',
 //         component: RegisterComponent,
