@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { FileUploadService } from '../../core/file-upload.service';
+import { Component, ElementRef, EventEmitter, inject, Input, Output, ViewChild } from '@angular/core';
+import { FileUploadService } from '../../core/services/roadmap/file-upload.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,11 +10,17 @@ import { CommonModule } from '@angular/common';
   styleUrl: './modal-roadmap.component.scss'
 })
 export class ModalRoadmapComponent {
-  private fileUploadService = inject(FileUploadService); 
+  private fileUploadService = inject(FileUploadService); // Inyectar el servicio sin usar constructor
 
   isDragging = false;
   files: File[] = [];
   filePreviews: string[] = [];
+  
+  @ViewChild('myModal') myModal!: ElementRef; // Referencia al modal
+
+  constructor() {
+    console.log('Bootstrap:' ,(window as any).boostrap);
+  }
 
   onDragOver(event: DragEvent) {
     event.preventDefault();
@@ -36,6 +42,8 @@ export class ModalRoadmapComponent {
     const files = event.dataTransfer?.files;
     if (files && files.length > 0) {
       this.handleFiles(files);
+      this.uploadFiles(); // Subir archivos inmediatamente
+      this.closeModal(); // Cerrar modal automáticamente
     }
   }
 
@@ -54,8 +62,15 @@ export class ModalRoadmapComponent {
         this.filePreviews.push(e.target.result);
       };
       reader.readAsDataURL(file);
+    });
+  }
 
-      // Subir archivo
+  isImage(fileUrl: string): boolean {
+    return fileUrl.startsWith('data:image/');
+  }
+
+  uploadFiles() {
+    this.files.forEach(file => {
       this.fileUploadService.uploadFile(file).subscribe({
         next: response => {
           console.log('Archivo subido con éxito', response);
@@ -70,7 +85,9 @@ export class ModalRoadmapComponent {
     });
   }
 
-  isImage(fileUrl: string): boolean {
-    return fileUrl.startsWith('data:image/');
+  closeModal() {
+    const modalElement = this.myModal.nativeElement;
+    const modalInstance = new (window as any).bootstrap.Modal(modalElement);
+    modalInstance.hide(); // Cerrar modal
   }
 }
