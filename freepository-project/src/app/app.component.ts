@@ -6,10 +6,11 @@ import { ProgramsListComponent } from './pages/programs/programs-list/programs-l
 import { ProgramsComponent } from './pages/programs/programs.component';
 import { PromotionsComponent } from './pages/promotions/promotions.component';
 import { PromotionsListComponent } from './pages/promotions/promotions-list/promotions-list.component';
+import { ResourceDetailComponent } from './pages/resources/resource-detail/resource-detail.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, HomeComponent, ProgramsListComponent,ProgramsComponent,PromotionsComponent,PromotionsListComponent],
+  imports: [RouterOutlet, RouterModule, HomeComponent, ProgramsListComponent,ProgramsComponent,PromotionsComponent,PromotionsListComponent,ResourceDetailComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
