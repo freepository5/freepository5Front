@@ -4,11 +4,17 @@
         @for (resource of resources; track $index) {
                 <h4>BCN Singulars</h4>
                 <h2>{{resource.title}}</h2>
-        }  
+        }
     </div>
     <hr>
+    <section></section>
+    <div class="buttons">
+        <div class="roadmapButton">
+            <app-button-roadmap></app-button-roadmap>
+            <app-modal-roadmap></app-modal-roadmap>
+        </div>
+        <app-button-resource></app-button-resource>
+    </div>
 </main>
-<app-button-roadmap></app-button-roadmap>
-<app-modal-roadmap></app-modal-roadmap>
 
 
