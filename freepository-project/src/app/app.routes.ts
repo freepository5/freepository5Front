@@ -7,10 +7,10 @@ import { PromotionsComponent } from './pages/promotions/promotions.component';
 import { PromotionsListComponent } from './pages/promotions/promotions-list/promotions-list.component';
 import { ModuleFormComponent } from './components/forms/module-form/module-form.component';
 import { RoadmapsComponent } from './pages/roadmaps/roadmaps.component';
-import { RoadmapsListComponent } from './pages/roadmaps/roadmaps-list/roadmaps-list.component';
 import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
 import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';import { ModuleComponent } from './pages/modules/module/module.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { ResourceComponent } from './pages/resources/resource/resource.component';
 
 
 export const routes: Routes = [
@@ -25,13 +25,11 @@ export const routes: Routes = [
             {path:'promotions',component:PromotionsComponent},
             {path:'promotions', component:PromotionsListComponent},
             {path:'modules', component:ModuleComponent},
-            // {path:'roadmaps',component:RoadmapsComponent},
-            // {path:'roadmaps', component:RoadmapsListComponent},
             {path: 'module-form', component:ModuleFormComponent},
+            {path:'resources', component:ResourceComponent},
             {path: 'roadmap-form', component:RoadmapFormComponent},
             {path: 'resource-form', component: ResourceFormComponent},
-            { path: 'register',component: RegisterComponent,
-            },
+            
             
         ]
     }

@@ -1,0 +1,14 @@
+<app-header-searcher></app-header-searcher>
+<main>
+    <div class="titleBox">
+        @for (resource of resources; track $index) {
+                <h4>BCN Singulars</h4>
+                <h2>{{resource.title}}</h2>
+        }  
+    </div>
+    <hr>
+</main>
+<app-button-roadmap></app-button-roadmap>
+<app-modal-roadmap></app-modal-roadmap>
+
+
