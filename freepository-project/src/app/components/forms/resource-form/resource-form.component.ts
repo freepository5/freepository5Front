@@ -28,7 +28,7 @@ export class ResourceFormComponent {
 constructor(private resourceService: ResourceService) {}
 
   onSubmit() {
-    // this.resourceService.addResource(this.resource).subscribe()
+    this.resourceService.addResource(this.resource).subscribe()
     // this.resource={
     //   title: '',
     //   description: '',

@@ -1,35 +1,35 @@
 <app-header></app-header>
 <main>
 
-    @for (resourceDetail of resourcesDetail; track $index) {
+    <!-- @for (resourceDetail of resourcesDetail; track $index) { -->
     <div class="detailCard">
         <!-- <div *ngFor="let resourceDetail of resourcesDetail; let i = index" class="detailCard"> -->
         <article>
             <h2>Título</h2>
-            <p>{{ resourceDetail.title }}</p>
+            <!-- <p>{{ resourceDetail.title }}</p> -->
         </article>
         <article>
             <h2>Descripción</h2>
-            <p>{{ resourceDetail.description }}</p>
+            <!-- <p>{{ resourceDetail.description }}</p> -->
         </article>
         <article class="resources">
             <h2>Recursos</h2>
             <div class="fieldset">
                 <div class="labelUrl">
                     <h2>Url</h2>
-                    <p>{{ resourceDetail.url }}</p>
+                    <!-- <p>{{ resourceDetail.url }}</p> -->
                 </div>
                 <div class="labelUpload">
                     <h2>Archivo</h2>
-                    <p>{{ resourceDetail.examine }}</p>
+                    <!-- <p>{{ resourceDetail.examine }}</p> -->
                 </div>
             </div>
         </article>
         <article>
             <h2>Etiquetas</h2>
-            <p>{{ resourceDetail.tags }}</p>
+            <!-- <p>{{ resourceDetail.tags }}</p> -->
         </article>
     </div>
-    }
+    <!-- } -->
 
 </main>
