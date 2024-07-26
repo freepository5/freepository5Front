@@ -1,0 +1,47 @@
+main{
+    height: 100vh;
+    max-width: 95vw;
+    width: 100%;
+    margin: auto;
+}
+
+.titleBox{
+    height: 8vh;
+}
+
+h2{
+    font-weight: 200;
+}
+
+section{
+    height: 50vh;
+}
+
+.buttons{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+// <app-header-searcher></app-header-searcher>
+// <main>
+//     <div class="titleBox">
+//         @for (resource of resources; track $index) {
+//                 <h4>BCN Singulars</h4>
+//                 <h2>{{resource.title}}</h2>
+//         }
+//     </div>
+//     <hr>
+//     <div class="buttons">
+//         <div class="roadmapButtoon">
+//             <app-button-roadmap></app-button-roadmap>
+//             <app-modal-roadmap></app-modal-roadmap>
+//         </div>
+//         <app-button-resource></app-button-resource>
+//     </div>
+// </main>
