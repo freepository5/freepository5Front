@@ -1,18 +1,38 @@
-<form>
-    <header>
-        <nav>
-            <h3>Agregar roadmap</h3>
-            <button><img src="../../../../assets/icons8-close-button-32.png" alt="Close button"/></button>
-        </nav>
-        <hr>
-    </header>
-    <main>
-        <div>
-            <label for="fileUpload" >
-                Examinar
-            </label>
-            <input id="fileUpload" type="file"/>
+<form [formGroup]="roadmapForm" (ngSubmit)="onSubmit()">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" #myModal>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modalHeader">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir roadmap</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <main>
+            <div class="drop-area" 
+                 (dragover)="onDragOver($event)" 
+                 (dragleave)="onDragLeave($event)" 
+                 (drop)="onDrop($event)"
+                 [class.dragover]="isDragging">
+              <label for="fileUpload">Examinar</label>
+              <input id="fileUpload" type="file" (change)="onFileChange($event)" multiple />
+              <p>ó arrastra hasta aquí</p>
+            </div>
+  
+            <button type="submit" class="btn btn-primary">
+              Guardar
+            </button>
+  
+            <!-- Sección de vistas previas -->
+            <div *ngIf="filePreviews.length > 0">
+              <h3>Archivo cargado:</h3>
+              <div *ngFor="let preview of filePreviews">
+                <img [src]="preview" alt="Vista previa del archivo" *ngIf="isImage(preview)" />
+                <p *ngIf="!isImage(preview)">{{ preview }}</p>
+              </div>
+            </div>
+          </main>
         </div>
-        <p>ó arrastra hasta aquí</p>
-    </main>
-</form>
+      </div>
+    </div>
+  </form>
+  

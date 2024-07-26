@@ -1,3 +1,3 @@
 export interface Resource {
-    title: string
+    title: string;
 }
