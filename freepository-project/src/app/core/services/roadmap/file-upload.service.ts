@@ -1,15 +1,15 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, firstValueFrom, Observable, of } from 'rxjs';
+import { Observable} from 'rxjs';
 import { Roadmap } from '../../../shared/models/roadmap';
-import roadmaps from '../../../data/roadmap';
+import { environment } from '../../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileUploadService {
-  private uploadUrl = 'http://localhost:3000/roadmap'; 
-  http = inject(HttpClient);
+  private http = inject(HttpClient);
+  private apiUrl = environment.apiUrl;
   roadmaps = signal<Roadmap[]>([])
 //   file = signal('');
  
@@ -18,7 +18,7 @@ export class FileUploadService {
 // );
 
   getAllRoadmap(): Observable<any>{
-    return this.http.get(`${this.uploadUrl}/resources`);
+    return this.http.get(`${this.apiUrl}/resources`);
   }
 
   // uploadFile(file: File): Observable<any> {
@@ -52,11 +52,11 @@ export class FileUploadService {
     const formData = new FormData();
     formData.append('file', file);
 
-    return this.http.post(`${this.uploadUrl}/resources`, formData);
+    return this.http.post(`${this.apiUrl}/resources`, formData);
   }
 
   addFile(formData: any): Observable<any> {
-    return this.http.post<any>(this.uploadUrl, formData);
+    return this.http.post<any>(this.apiUrl, formData);
   }
 }
 
