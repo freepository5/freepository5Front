@@ -34,6 +34,31 @@
       "password": "1222222222222"
     }
   ],
+  "modules": [
+    {
+      "id": "41d0"
+    },
+    {
+      "id": "ba51",
+      "title": "fghtr"
+    },
+    {
+      "id": "a1f3",
+      "title": "Frontend con Angular"
+    },
+    {
+      "id": "215e",
+      "title": "Frontend con Angular"
+    },
+    {
+      "id": "c485",
+      "title": "Frontend con React"
+    },
+    {
+      "id": "01c2",
+      "title": "Frontend con React"
+    }
+  ],
   "roadmap": [
     {
       "id": "bde6",
