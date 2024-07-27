@@ -10,6 +10,11 @@ section{
     align-items: center;
     justify-content: center;
     height: 50%;
+    max-width: calc(100% - 6em);
+    width: 100%;
+    margin: auto;
+    margin-top: 6em;
+    text-align: center;
 }
 
 section h1, b{

@@ -1,4 +1,4 @@
-<app-header-searcher></app-header-searcher>
+<app-header></app-header>
 <main>
     <div class="titleBox">
         @for (resource of resources; track $index) {
@@ -8,12 +8,15 @@
     </div>
     <hr>
     <section class="resources">
-@for(data of data;track $index){
-    <a>
-        <h1>{{data.title}}</h1>
-        <h4>{{data.tags}}</h4>
-    </a>
-}
+        <div class="roadmapSection">
+            <img class="roadmap"/>
+        </div>    
+        @for(data of data;track $index){
+        <a>
+            <h1>{{data.title}}</h1>
+            <h4>{{data.tags}}</h4>
+        </a>
+        }   
     </section>
     <div class="buttons">
         <div class="roadmapButton">

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { HeaderSearcherComponent } from '../../../layout/header-searcher/header-searcher.component';
+import { HeaderComponent } from '../../../layout/header/header.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { Resource } from '../../../shared/models/resource';
 import { ButtonRoadmapComponent } from "../../../components/button/button-roadmap/button-roadmap.component";
@@ -11,7 +11,7 @@ import { ResourceService } from '../../../core/services/resource.service';
 @Component({
   selector: 'app-resource',
   standalone: true,
-  imports: [ResourceComponent, HeaderSearcherComponent, RouterLink, RouterModule, ButtonRoadmapComponent, ModalRoadmapComponent,ButtonResourceComponent, ResourceFormComponent],
+  imports: [ResourceComponent, HeaderComponent, RouterLink, RouterModule, ButtonRoadmapComponent, ModalRoadmapComponent,ButtonResourceComponent, ResourceFormComponent],
   templateUrl: './resource.component.html',
   styleUrl: './resource.component.scss'
 })
