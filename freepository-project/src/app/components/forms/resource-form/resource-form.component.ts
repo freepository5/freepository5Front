@@ -1,9 +1,11 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { ResourceDetail } from '../../../shared/models/resource-detail';
 import { HeaderComponent } from '../../../layout/header/header.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ResourceService } from '../../../core/services/resource.service';
+import { Router, RouterLink,  } from '@angular/router';
+
 
 
 @Component({
@@ -11,10 +13,15 @@ import { ResourceService } from '../../../core/services/resource.service';
   standalone: true,
   templateUrl: './resource-form.component.html',
   styleUrls: ['./resource-form.component.scss'],
-  imports: [HeaderComponent,CommonModule,FormsModule],
+  imports: [HeaderComponent,CommonModule,FormsModule,RouterLink],
 
 })
 export class ResourceFormComponent {
+
+  private router = inject(Router);
+
+  private resourceService = inject(ResourceService)
+
   @Output() resourceAdded = new EventEmitter<ResourceDetail>();
 
   resource: ResourceDetail = {
@@ -25,18 +32,13 @@ export class ResourceFormComponent {
     tags: ''
   };
 
-constructor(private resourceService: ResourceService) {}
+constructor() {}
 
   onSubmit() {
     this.resourceService.addResource(this.resource).subscribe()
-    // this.resource={
-    //   title: '',
-    //   description: '',
-    //   url: '',
-    //   examine: '',
-    //   tags: ''}
+   
         this.resourceAdded.emit(this.resource);
-        this.resetForm();
+        this.router.navigate(['/resources'])
   }
 
   resetForm() {

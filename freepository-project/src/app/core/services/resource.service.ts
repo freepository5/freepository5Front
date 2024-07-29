@@ -18,6 +18,11 @@ export class ResourceService {
     return this.userService.get<ResourceDetail[]>(this.apiUrl);
   }
 
+  getResourceById(id:string){
+    console.log(id)
+    return this.userService.get<ResourceDetail>(`${this.apiUrl}/${id}`)
+  }
+
   addResource(resource: ResourceDetail): Observable<ResourceDetail> {
     console.log(resource)
     return this.userService.post<ResourceDetail>(this.apiUrl, resource);

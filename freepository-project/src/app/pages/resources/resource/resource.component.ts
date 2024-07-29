@@ -11,7 +11,7 @@ import { ResourceService } from '../../../core/services/resource.service';
 @Component({
   selector: 'app-resource',
   standalone: true,
-  imports: [ResourceComponent, HeaderComponent, RouterLink, RouterModule, ButtonRoadmapComponent, ModalRoadmapComponent,ButtonResourceComponent, ResourceFormComponent],
+  imports: [ResourceComponent, HeaderComponent, RouterLink, RouterModule, ButtonRoadmapComponent, ModalRoadmapComponent,ButtonResourceComponent, ResourceFormComponent,],
   templateUrl: './resource.component.html',
   styleUrl: './resource.component.scss'
 })
