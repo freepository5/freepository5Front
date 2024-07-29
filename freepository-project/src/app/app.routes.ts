@@ -11,6 +11,7 @@ import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-fo
 import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';import { ModuleComponent } from './pages/modules/module/module.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ResourceComponent } from './pages/resources/resource/resource.component';
+import { ModuleDetailComponent } from './components/details/module-detail/module-detail.component';
 
 
 export const routes: Routes = [
@@ -26,6 +27,7 @@ export const routes: Routes = [
             {path:'promotions', component:PromotionsListComponent},
             {path:'modules', component:ModuleComponent},
             {path: 'module-form', component:ModuleFormComponent},
+            {path: 'module-detail/:id', component:ModuleDetailComponent},
             {path:'resources', component:ResourceComponent},
             {path: 'roadmap-form', component:RoadmapFormComponent},
             {path: 'resource-form', component: ResourceFormComponent},

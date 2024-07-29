@@ -8,7 +8,9 @@
 <hr>
         <section class="boxes">
         @for (module of modules; track $index) {
-            <h5 class="cardTitle">{{ module.title }}</h5>
+            <a [routerLink]="['/module-detail', module.id]">
+                <h5 class="cardTitle">{{ module.title }}</h5>
+            </a>
         }
         </section>
 </main>
