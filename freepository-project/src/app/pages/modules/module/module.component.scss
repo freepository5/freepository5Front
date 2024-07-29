@@ -1,0 +1,15 @@
+.cardTitle{
+    padding: 1em 2em;
+    margin-inline: 0.25em;
+    background-color: rgba(53, 53, 53, 0.2);
+    border-radius: 1em;
+    font-size: 2em;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.cardTitle:hover{
+    color: rgba(255, 86, 34, 0.966);
+
+}
+
