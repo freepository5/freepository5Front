@@ -1,0 +1,81 @@
+:host{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    max-width: 90vw;
+    width: 100%;
+}
+
+main
+
+.detailCard{
+    display: grid;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.detailCard article{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    max-width: 75%;
+    width: 100%;
+    margin: 1.7rem auto;
+    height: 15vh;
+}
+
+article .fieldset{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: space-between;
+    max-width: 100%;
+    width: 100%;
+    gap: 1rem;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+}
+
+
+article p{
+    color: rgba(51, 51, 51, 0.4);
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border: 0.5px solid rgba($color: #333333, $alpha: 0.5);
+    text-align: center;
+}
+
+.resources{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.fieldset .labelUrl ,.labelUpload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #4211BA;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.labelUpload p{
+    height: 50%;
+    background-color: #4211BA;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
