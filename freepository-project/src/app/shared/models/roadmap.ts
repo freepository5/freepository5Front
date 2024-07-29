@@ -1,3 +1,4 @@
 export interface Roadmap {
-    title: string,
+    id?:number;
+    image:string;
 }

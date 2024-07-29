@@ -2,16 +2,13 @@
     margin:0 auto;
     display:flex;
     justify-content: center;
+    // align-items: space-between;
+    // margin:0 auto;
 }
-// .app-header{
-//     width:100vw;
-//     display:flex;
-//     justify-content: center;
-    
-// }
-.homeHeader{
-    height: 120px;
-    width: 94%;
+
+header{
+    height: 160px;
+    width: calc(100% - 6em);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,9 +17,37 @@
 .logo{
     width:200px;
     height:100px;
-    margin-left: -30px;
+
 }
+
 .userIcon{
-    width:35px;
-    height:35px;
+    width: 3.5em;
+    height: 3.5em;
 }
+
+.end-header {
+    display: flex;
+}
+
+.end-header app-searcher {
+    margin-inline-end: 1em;
+}
+
+
+// :host{
+//     display:flex;
+//     justify-content: center;
+// }
+
+// header{
+//     height: 120px;
+//     width: calc(100% - 6em);
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// img{
+//     width:200px;
+//     height:100px;
+// }

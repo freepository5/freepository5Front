@@ -1,0 +1,104 @@
+{
+  "user": [
+    {
+      "id": "2368"
+    },
+    {
+      "id": "89e0",
+      "name": "maria",
+      "email": "maria@gmail.com",
+      "password": "111111111111"
+    },
+    {
+      "id": "1876",
+      "name": "huliatz",
+      "email": "huliatz@gmail.com",
+      "password": "1234567890000"
+    },
+    {
+      "id": "898a",
+      "name": "adi",
+      "email": "adiyie@gmail.com",
+      "password": "adfghjklll"
+    },
+    {
+      "id": "9b9d",
+      "name": "ssndlknk",
+      "email": "kjsnsefnkle@gmail.com",
+      "password": "awklndlkawnlkwdlkdwkl"
+    },
+    {
+      "id": "2d27",
+      "name": "test100",
+      "email": "test100@gmail.com",
+      "password": "1222222222222"
+    }
+  ],
+  "resource": [
+    {
+      "title": "fsfs",
+      "description": "fsfs",
+      "url": "ul7",
+      "examine": "tew3",
+      "tags": "te46",
+      "id": 1
+    },
+    {
+      "title": "afsd",
+      "description": "",
+      "url": "",
+      "examine": "",
+      "tags": "",
+      "id": 2
+    }],
+  "roadmap": [
+    {
+      "id": "bde6",
+      "file": {}
+    },
+    {
+      "id": "3641",
+      "file": {}
+    },
+    {
+      "id": "a4a0",
+      "file": {}
+    },
+    {
+      "id": "cd40",
+      "file": {}
+    },
+    {
+      "id": "98fc",
+      "file": {}
+    },
+    {
+      "id": "4a7c",
+      "file": {}
+    },
+    {
+      "id": "c190",
+      "file": {}
+    },
+    {
+      "id": "9e0d",
+      "file": {}
+    },
+    {
+      "id": "017e",
+      "file": {}
+    },
+    {
+      "id": "ea06",
+      "file": {}
+    },
+    {
+      "id": "3810",
+      "file": {}
+    },
+    {
+      "id": "061c",
+      "file": {}
+    }
+  ]
+}
