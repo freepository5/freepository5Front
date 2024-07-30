@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderSearcherComponent } from './header-searcher.component';
+import { ButtonResourceComponent } from './button-resource.component';
 
-describe('HeaderSearcherComponent', () => {
-  let component: HeaderSearcherComponent;
-  let fixture: ComponentFixture<HeaderSearcherComponent>;
+describe('ButtonResourceComponent', () => {
+  let component: ButtonResourceComponent;
+  let fixture: ComponentFixture<ButtonResourceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderSearcherComponent]
+      imports: [ButtonResourceComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HeaderSearcherComponent);
+    fixture = TestBed.createComponent(ButtonResourceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

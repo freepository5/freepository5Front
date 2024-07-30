@@ -34,9 +34,29 @@
       "password": "1222222222222"
     }
   ],
+
   "module": [
    
   ],
+
+  "resource": [
+    {
+      "title": "fsfs",
+      "description": "fsfs",
+      "url": "ul7",
+      "examine": "tew3",
+      "tags": "te46",
+      "id": 1
+    },
+    {
+      "title": "afsd",
+      "description": "",
+      "url": "",
+      "examine": "",
+      "tags": "",
+      "id": 2
+    }],
+
   "roadmap": [
     {
       "id": "bde6",

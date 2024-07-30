@@ -1,39 +1,38 @@
 <app-header></app-header>
-<form>
+<form (ngSubmit)="onSubmit()">
     <label>
-        Título
-        <input type="text" placeholder="Coloca aquí el título de tu recurso"/>
+      Título
+      <input [(ngModel)]="resource.title" name="title" type="text" placeholder="Coloca aquí el título de tu recurso"/>
     </label>
     <label>
-        Descripción
-        <input type="text" placeholder="Coloca aquí una descripción"/>
+      Descripción
+      <input [(ngModel)]="resource.description" name="description" type="text" placeholder="Coloca aquí una descripción"/>
     </label>
     <label class="resources">
-        Recursos
-        <fieldset>
-            <label>
-                URL
-                <input class="urlSubmit" type="text" placeholder="Coloca aquí tu URL"/>
-            </label>
-            <label class="fileUpload">
-                Examinar
-                <input type="file" class="uploadFile"/>
-            </label>
-        </fieldset>
+      Recursos
+      <fieldset>
+        <label>
+          URL
+          <input [(ngModel)]="resource.url" name="url" type="text" placeholder="Coloca aquí tu URL"/>
+        </label>
+        <label class="fileUpload">
+          Examinar
+          <input type="file" class="uploadFile"/>
+        </label>
+      </fieldset>
     </label>
-    <label class="tags" for="tags">
-        Etiquetas
-        <select name="tags" id="tags" multiple>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="javaScript">JavaScript</option>
-            <option value="typeScript">TypeScript</option>
-            <option value="angular">Angular</option>
-            <option value="c#">C#</option>
-            <option value=".net">.Net</option>
-        </select>    
+    <label class="tags">
+      Etiquetas
+      <select [(ngModel)]="resource.tags" name="tags" multiple>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javaScript">JavaScript</option>
+        <option value="typeScript">TypeScript</option>
+        <option value="angular">Angular</option>
+        <option value="c#">C#</option>
+        <option value=".net">.Net</option>
+      </select>    
     </label>
-    <label>
-        <input class="submit" type="submit" placeholder="Guardar" value="Guardar"/>
-    </label>
-</form>
+    <button type="submit">Guardar</button>
+  </form>
+  {{resource.title}}

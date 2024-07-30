@@ -21,6 +21,8 @@ export class SearcherComponent implements AfterViewInit {
     input.addEventListener('blur', () => {
       if (input.value === '') {
         placeholder.style.opacity = '1';
+      } else {
+        console.log('Input blurred with value');
       }
     });
   }
