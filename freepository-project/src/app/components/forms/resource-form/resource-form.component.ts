@@ -6,6 +6,7 @@ import { ResourceService } from '../../../core/services/resource/resource.servic
 import { Router, RouterLink,  } from '@angular/router';
 import { ResourceComponent } from '../../../pages/resources/resource/resource.component';
 import { Resource } from '../../../shared/models/resource';
+import { SessionStorageService } from '../../../core/services/session-storage.service';
 
 
 @Component({
@@ -21,7 +22,10 @@ export class ResourceFormComponent {
 
   private router = inject(Router);
 
-  private resourceService = inject(ResourceService)
+  private resourceService = inject(ResourceService);
+  
+  private sessionStorageService = inject(SessionStorageService);
+
 
   // @Output() resourceAdded = new EventEmitter<Resource>();
 
@@ -29,12 +33,16 @@ export class ResourceFormComponent {
     title: '',
     description: '',
     url: '',
-    examine: '',
-    tags: '',
-    moduleId:0
+    tagIds: [1],
+    moduleId:1,
+    userId: ''
   };
 
+
+
   onSubmit() {
+    this.resource.userId = this.sessionStorageService.getItem('userId');
+
    
     
     this.resourceService.addResource(this.resource).subscribe(
@@ -52,9 +60,9 @@ export class ResourceFormComponent {
       title: '',
       description: '',
       url: '',
-      examine: '',
-      tags: '',
+      tagIds: [],
       moduleId:0,
+      userId: ''
     };
   }
 }

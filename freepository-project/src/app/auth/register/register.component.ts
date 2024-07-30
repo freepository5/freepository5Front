@@ -20,9 +20,9 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
 
     this.registerForm=this.formBuilder.group({
-      name:["", Validators.required],
+      userName:["", Validators.required],
       email:["", [Validators.required, Validators.email]],
-      password:["", [Validators.required, Validators.minLength(10)]],
+      password:["", [Validators.required]],
     });
   }
 
@@ -32,8 +32,11 @@ export class RegisterComponent implements OnInit {
 
       this.authService.register(userData).subscribe({
         next:(response)=>{
+          console.log(response);
+          
+          this.authService.saveUserId(response.id)
           this.authService.saveToken(response.token);
-          window.location.reload();
+          // window.location.reload();
         },
         error:(error)=>{
           console.error('Error during register',error);
