@@ -35,18 +35,7 @@
     }
   ],
   "module": [
-    {
-      "id": "2022",
-      "title": "Frontend con Angular"
-    },
-    {
-      "id": "baae",
-      "title": "Frontend con React"
-    },
-    {
-      "id": "b877",
-      "title": "Frontend "
-    }
+   
   ],
   "roadmap": [
     {
