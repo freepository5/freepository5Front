@@ -25,7 +25,7 @@ export class ResourceService {
 
   getResourcesByModuleId(id:number){
     console.log(id)
-    return this.userService.get<Resource>(`${this.apiUrl}/?moduleId=${id}`)
+    return this.userService.get<Resource>(`${this.apiUrl}/${id}/resource`)
   }
 
   addResource(resource: Resource): Observable<Resource> {

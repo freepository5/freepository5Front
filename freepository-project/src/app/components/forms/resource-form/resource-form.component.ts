@@ -31,14 +31,20 @@ export class ResourceFormComponent {
     url: '',
     examine: '',
     tags: '',
-    moduleId:0,
+    moduleId:0
   };
 
   onSubmit() {
-    this.resourceService.addResource(this.resource).subscribe()
+   
+    
+    this.resourceService.addResource(this.resource).subscribe(
+      result => console.log(result)
+    )
+
+    // this.router.navigate(['/module-detail/:id'])
    
         // this.resourceAdded.emit(this.resource);
-        this.router.navigate(['/module-detail/:id'])
+
   }
 
   resetForm() {

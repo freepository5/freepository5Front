@@ -8,6 +8,7 @@ import { ButtonResourceComponent } from "../../button/button-resource/button-res
 import { ResourceFormComponent } from '../../forms/resource-form/resource-form.component';
 import { ResourceComponent } from "../../../pages/resources/resource/resource.component";
 import { ResourceService } from '../../../core/services/resource/resource.service';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-module-detail',
@@ -35,12 +36,9 @@ export class ModuleDetailComponent implements OnInit {
   }
 
 llenarModule(){
-  this.moduleService.getResourceById(this.itemId).subscribe(
+  this.moduleService.getResourcesByModuleId(+this.itemId).subscribe(
     (module) =>{
       this.module = module;
-    },
-    (error) => {
-      console.error('Failed to load module data', error);
     }
   );
 }
