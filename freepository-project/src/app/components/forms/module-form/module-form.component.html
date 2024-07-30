@@ -1,21 +1,23 @@
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<form [formGroup]="moduleForm" (ngSubmit)="onSubmit()">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modalHeader">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir titulo</h1>
+          <label for="moduleTitle" class="form-label">Título del módulo</label>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
         <div class="modalBody">
-            <input type="text" class="moduleTitle" placeholder="Titulo">
+          <div class="mb-3">
+            <input type="text" id="moduleTitle" formControlName="title" class="form-control" placeholder="ej: Frontend con Angular">
+          </div>
         </div>
         <div class="modalFooter">
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="submit" class="btn btn-primary" [disabled]="moduleForm.invalid" data-bs-dismiss="modal">Guardar</button>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
+</form>
 
 
-      

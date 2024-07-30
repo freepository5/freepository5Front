@@ -1,9 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../../layout/header/header.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { Resource } from '../../../shared/models/resource';
-import { ButtonRoadmapComponent } from "../../../components/button/button-roadmap/button-roadmap.component";
-import { ModalRoadmapComponent } from "../../../components/modal-roadmap/modal-roadmap.component";
 import { ButtonResourceComponent } from "../../../components/button/button-resource/button-resource.component";
 import { ResourceFormComponent } from '../../../components/forms/resource-form/resource-form.component';
 import { ResourceService } from '../../../core/services/resource.service';
@@ -13,13 +11,12 @@ import { ResourceService } from '../../../core/services/resource.service';
   standalone: true,
   imports: [ResourceComponent, HeaderComponent, RouterLink, RouterModule, ButtonRoadmapComponent, ModalRoadmapComponent,ButtonResourceComponent, ResourceFormComponent,],
   templateUrl: './resource.component.html',
-  styleUrl: './resource.component.scss'
+  styleUrls: ['./resource.component.scss']
 })
 
-export class ResourceComponent {
-  resources:Resource[] = [{
-    title: "Frontend con Angular"
-  }];
+export class ResourceComponent implements OnInit {
+  resources: Resource[] = [{
+    title: "Frontend con Angular",
   
   private userService = inject(ResourceService);
   data:any[]=[]
@@ -33,6 +30,4 @@ export class ResourceComponent {
       console.log(this.data);
     })
   };
-
-
 }
