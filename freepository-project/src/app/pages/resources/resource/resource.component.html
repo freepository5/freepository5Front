@@ -1,24 +1,7 @@
-<app-header></app-header>
-<main>
-    <div class="titleBox">
-        @for (resource of resources; track $index) {
-                <h4>BCN Singulars</h4>
-                <h2>{{resource.title}}</h2>
-        }
-    </div>
-    <hr>
-    <section class="resources">
-        <div class="roadmapSection">
-            <img class="roadmap"/>
-        </div> 
-        @for(data of data;track $index){
+           @for(data of data;track $index){
         <a [routerLink]="['/resource-detail', data.id]">
             <h1>{{data.title}}</h1>
             <h4>{{data.tags}}</h4>
         </a>
         }   
-    </section>
-    <div class="buttons">
-      <app-button-resource></app-button-resource>
-    </div>
-</main>
+   

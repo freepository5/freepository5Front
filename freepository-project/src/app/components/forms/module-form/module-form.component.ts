@@ -33,10 +33,8 @@ export class ModuleFormComponent implements OnInit {
       
       this.moduleService.addModule(newModule).subscribe({
         next: (module) => {
-          // Añadir el módulo al array y resetear el formulario
           this.modules.push(module);
           this.moduleForm.reset();
-
           this.router.navigate(['/modules'])
         },
         error: (error) => {

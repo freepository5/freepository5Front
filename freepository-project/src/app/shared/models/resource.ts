@@ -1,3 +1,8 @@
 export interface Resource {
-    title: string;
+    title:string,
+    description:string,
+    url:string,
+    examine: string,
+    tags:string,
+    moduleId:number,
 }

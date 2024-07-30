@@ -3,7 +3,7 @@ import { HeaderComponent } from "../../../layout/header/header.component";
 import { ResourceFormComponent } from '../../../components/forms/resource-form/resource-form.component';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ResourceService } from '../../../core/services/resource.service';
+import { ResourceService } from '../../../core/services/resource/resource.service';
 import { ResourceComponent } from '../resource/resource.component';
 
 @Component({

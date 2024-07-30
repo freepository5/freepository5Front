@@ -1,19 +1,20 @@
-import { Component, Output, EventEmitter, inject } from '@angular/core';
-import { ResourceDetail } from '../../../shared/models/resource-detail';
+import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../../../layout/header/header.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ResourceService } from '../../../core/services/resource.service';
+import { ResourceService } from '../../../core/services/resource/resource.service';
 import { Router, RouterLink,  } from '@angular/router';
-
+import { ResourceComponent } from '../../../pages/resources/resource/resource.component';
+import { Resource } from '../../../shared/models/resource';
 
 
 @Component({
   selector: 'app-resource-form',
   standalone: true,
+  imports: [HeaderComponent,CommonModule,FormsModule,RouterLink, ResourceComponent],
   templateUrl: './resource-form.component.html',
   styleUrls: ['./resource-form.component.scss'],
-  imports: [HeaderComponent,CommonModule,FormsModule,RouterLink],
+  
 
 })
 export class ResourceFormComponent {
@@ -22,23 +23,22 @@ export class ResourceFormComponent {
 
   private resourceService = inject(ResourceService)
 
-  @Output() resourceAdded = new EventEmitter<ResourceDetail>();
+  // @Output() resourceAdded = new EventEmitter<Resource>();
 
-  resource: ResourceDetail = {
+  resource: Resource = {
     title: '',
     description: '',
     url: '',
     examine: '',
-    tags: ''
+    tags: '',
+    moduleId:0,
   };
-
-constructor() {}
 
   onSubmit() {
     this.resourceService.addResource(this.resource).subscribe()
    
-        this.resourceAdded.emit(this.resource);
-        this.router.navigate(['/resources'])
+        // this.resourceAdded.emit(this.resource);
+        this.router.navigate(['/module-detail/:id'])
   }
 
   resetForm() {
@@ -47,7 +47,8 @@ constructor() {}
       description: '',
       url: '',
       examine: '',
-      tags: ''
+      tags: '',
+      moduleId:0,
     };
   }
 }

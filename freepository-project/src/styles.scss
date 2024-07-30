@@ -85,5 +85,13 @@ hr{
     color: rgba(255, 86, 34, 0.966);
 }
 
+.buttons{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 

@@ -1,21 +1,23 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { HeaderSearcherComponent } from "../../../layout/header-searcher/header-searcher.component";
 import { ActivatedRoute } from '@angular/router';
 import { ButtonRoadmapComponent } from "../../button/button-roadmap/button-roadmap.component";
 import { ModuleFormComponent } from "../../forms/module-form/module-form.component";
-import { ModuleService } from '../../../core/services/module/module.service';
-import { ModuleDetailService } from '../../../core/services/module-detail/module-detail.service';
 import { ModuleDetail } from '../../../shared/models/module-detail';
+import { HeaderComponent } from '../../../layout/header/header.component';
+import { ButtonResourceComponent } from "../../button/button-resource/button-resource.component";
+import { ResourceFormComponent } from '../../forms/resource-form/resource-form.component';
+import { ResourceComponent } from "../../../pages/resources/resource/resource.component";
+import { ResourceService } from '../../../core/services/resource/resource.service';
 
 @Component({
   selector: 'app-module-detail',
   standalone: true,
-  imports: [HeaderSearcherComponent, ButtonRoadmapComponent, ModuleFormComponent],
+  imports: [ResourceFormComponent, ButtonResourceComponent, ButtonRoadmapComponent, ModuleFormComponent, HeaderComponent, ButtonResourceComponent, ResourceComponent],
   templateUrl: './module-detail.component.html',
   styleUrl: './module-detail.component.scss'
 })
 export class ModuleDetailComponent implements OnInit {
-  moduleService = inject(ModuleDetailService)
+  moduleService = inject(ResourceService)
   route = inject(ActivatedRoute)
 
   itemId!: string;
@@ -33,7 +35,7 @@ export class ModuleDetailComponent implements OnInit {
   }
 
 llenarModule(){
-  this.moduleService.getModuleById(this.itemId).subscribe(
+  this.moduleService.getResourceById(this.itemId).subscribe(
     (module) =>{
       this.module = module;
     },
