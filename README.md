@@ -28,49 +28,49 @@ This is the repository for the frontend Factoria F5 project freepository5
 
 ## Introducción🚦🚦
 
-Desde el grupo de estudiantes de Factoría F5, estamos desarrollando un repositorio único de recursos para compartir entre formadores. Queremos trabajar en un repositorio universal que cuente con recursos para compartir y que se enriquezca con las aportaciones de formadores/as
+Desde el grupo de estudiantes de Factoría F5, estamos desarrollando un repositorio único de recursos para compartir entre formadores. Queremos trabajar en un repositorio universal que cuente con recursos para compartir y que se enriquezca con las aportaciones de formadores/as.
 
-La clave de este repositorio será tener una buena interfaz gráfica que incluya:
 
-- Un buscador potente por etiquetas.
+## Objetivo🔮🔮
+
+Desarrollar una aplicación web similar a Notion o Google Clasroom, que permita gestionar y acceder fácilmente a todos los recursos de las escuelas mediante un sistema organizado y un buscador eficiente.
+- Un buscador potente por etiquetas,nombres y titulos.
 
 - Indexar los contenidos por materias, formando siempre parte de un itinerario formativo.
 
 - El contenido tendrá distintas etiquetas, incluyendo el nivel de práctica necesario y los recursos que se necesitan asimilar previamente.
 
--Un proceso de creación de itinerarios y subida de recursos dinámico y divertido, con mecanismos de drag and drop.
+- Un proceso de creación de itinerarios y subida de recursos dinámico y divertido, con mecanismos de drag and drop.
 
--Documentos de apuntes colaborativos que acompañen a cada recurso.
-
-## Objetivo🔮🔮
-
-Desarrollar una aplicación web similar a Notion o Google Clasroom, que permita gestionar y acceder fácilmente a todos los recursos de las escuelas mediante un sistema organizado y un buscador eficiente.
+- Documentos de apuntes colaborativos que acompañen a cada recurso.
 
 ## Funcionalidades🦺🦺
 
--Inicio de Registro
+- Inicio de Registro
 
--Crear y leer enlaces de recursos.
+- Crear y leer enlaces de recursos.
 
--Categorizar y etiquetar enlaces para una mejor organización.
+- Categorizar y etiquetar enlaces para una mejor organización.
 
--Posibilidad de añadir descripciones y notas a cada enlace.
+- Posibilidad de añadir descripciones y notas a cada enlace.
 
 
--Implementar un buscador que permita buscar enlaces por etiquetas .
+- Implementación de un buscador que permita buscar enlaces por etiquetas .
 
--Interfaz de Usuario (UI)
+- Interfaz de Usuario (UI).
 
--Diseño intuitivo y fácil de usar.
+- Diseño intuitivo y fácil de usar.
 
--Interfaz de búsqueda accesible y visible en todo momento.
+- Interfaz de búsqueda accesible y visible en todo momento.
+
+- Drag and drop.
 
 ## Repositorios🎪🎪
 
--Enlace al Repositorio del Frontend:
+- Enlace al Repositorio del Frontend:
 https://github.com/freepository5/freepository5Front
 
--Enlace al Repositorio del Backend:
+- Enlace al Repositorio del Backend:
 https://github.com/freepository5/freepository5Back
 
 ## Instalación General 🚧🚧
@@ -108,13 +108,15 @@ Node.js
 
 ## Tecnologias empleadas🔍🔎
 
--HTML5
+- HTML5
 
--Sass
+- Sass
 
--TypeScript
+- TypeScript
 
--Angular
+- Angular
 
--Bootsrtrap
+- Bootstrap
+
+
 
