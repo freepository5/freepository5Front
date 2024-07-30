@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/services/auth/auth.service';
 import { LoginComponent } from "../login/login.component";
+
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -16,7 +17,6 @@ export class RegisterComponent implements OnInit {
   router = inject(Router);
   registerForm!:FormGroup;
   
-
   ngOnInit(): void {
 
     this.registerForm=this.formBuilder.group({
@@ -33,7 +33,6 @@ export class RegisterComponent implements OnInit {
       this.authService.register(userData).subscribe({
         next:(response)=>{
           console.log(response);
-          
           this.authService.saveUserId(response.id)
           this.authService.saveToken(response.token);
           // window.location.reload();

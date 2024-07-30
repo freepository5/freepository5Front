@@ -1,17 +1,17 @@
 <header>
     <img src="assets/factoria-logo.png" alt="Logo">
     <form [formGroup]="loginForm" (ngSubmit)="Submit()" class="loginForm">
-                <label for="email">
-                    <input type="email" formControlName="email" placeholder="Correo electrónico" autocomplete="email">
-                </label>    
-                <label for="password">
-                    <input type="password" formControlName="password" placeholder="Contraseña" autocomplete="current-password">
-                </label>
-                <button type="submit">Entrar</button>
-               <label for="remember" class="remember" >
-                <input type ="checkbox" formControlName="remember">
-                 Recordar la sesión
-               </label>
+      <label for="UserName">
+        <input type="UserName" formControlName="UserName" placeholder="Nombre de usuario" autocomplete="UserName">
+      </label>    
+      <label for="Password">
+        <input type="Password" formControlName="Password" placeholder="Contraseña" autocomplete="current-password">
+      </label>
+      <button type="submit">Entrar</button>
+      <label for="remember" class="remember">
+        <input type="checkbox" formControlName="remember">
+        Recordar la sesión
+      </label>
     </form>
-</header>
-
+  </header>
+  

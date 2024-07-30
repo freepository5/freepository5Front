@@ -12,30 +12,38 @@ import { User } from '../../shared/models/user';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit{
-  private loginService=inject(AuthService);
   private authService=inject(AuthService);
   private formBuilder=inject (FormBuilder);
-  router =inject(Router);
+  router = inject(Router);
   loginForm!:FormGroup;
  
-    
 ngOnInit(): void {
   this.loginForm=this.formBuilder.group({
-    email:["", [Validators.required, Validators.email]],
-    password:["", [Validators.required, Validators.minLength(10)]],
+    UserName:["", [Validators.required]],
+    Password:["", [Validators.required]],
     remember:[false],
   });
   
 }
 
-Submit(): void{
-  const user:User={
-    email:this.loginForm.controls["email"].value,
-    password:this.loginForm.controls["password"].value,
-  }
-  if(this.loginForm.valid){
-    this.loginService.login(user).subscribe(r=>{
-      this.router.navigate(['/home'])
+Submit(): void {
+  if (this.loginForm.valid) {
+    const user: User = {
+      UserName: this.loginForm.controls["UserName"].value,
+      Password: this.loginForm.controls["Password"].value,
+    };
+
+    this.authService.login(user).subscribe({
+      next: (response) => {
+        console.log(response);
+        this.authService.saveUserId(response.id); // Guarda el userId
+        this.authService.saveToken(response.token);
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        console.error('Login failed', error);
+        alert('Login failed: ' + error.message);
+      }
     });
   }
  }

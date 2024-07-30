@@ -27,13 +27,14 @@ export class ResourceDetailComponent implements OnInit {
         this.itemId = id;
         this.llenarData();
       } else {
-        // Manejar el caso cuando no hay 'id' en la ruta
+    
       }
     });
   }
 
   llenarData() {
     this.userService.getResourceById(this.itemId).subscribe((data) => {
+      console.log(this.itemId)
       this.data = data;
       console.log(this.data);
     });
