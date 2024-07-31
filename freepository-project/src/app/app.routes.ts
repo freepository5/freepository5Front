@@ -8,11 +8,11 @@ import { PromotionsListComponent } from './pages/promotions/promotions-list/prom
 import { ModuleFormComponent } from './components/forms/module-form/module-form.component';
 import { RoadmapFormComponent } from './components/forms/roadmap-form/roadmap-form.component';
 import { ResourceFormComponent } from './components/forms/resource-form/resource-form.component';
-import { ModuleComponent } from './pages/modules/module/module.component';
+import { ModuleComponent } from './pages/modules/module.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ResourceDetailComponent } from './pages/resources/resource-detail/resource-detail.component';
 import { ResourceComponent } from './pages/resources/resource/resource.component';
-import { ModuleDetailComponent } from './components/details/module-detail/module-detail.component';
+import { ModuleDetailComponent } from './pages/modules/modules-detail/module-detail.component';
 import { GuardService } from './core/services/guard/guard.service';
 
 

@@ -1,12 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ButtonRoadmapComponent } from "../../button/button-roadmap/button-roadmap.component";
-import { ModuleFormComponent } from "../../forms/module-form/module-form.component";
+import { ButtonRoadmapComponent } from "../../../components/button/button-roadmap/button-roadmap.component";
+import { ModuleFormComponent } from "../../../components/forms/module-form/module-form.component";
 import { ModuleDetail } from '../../../shared/models/module-detail';
 import { HeaderComponent } from '../../../layout/header/header.component';
-import { ButtonResourceComponent } from "../../button/button-resource/button-resource.component";
-import { ResourceFormComponent } from '../../forms/resource-form/resource-form.component';
-import { ResourceComponent } from "../../../pages/resources/resource/resource.component";
+import { ButtonResourceComponent } from "../../../components/button/button-resource/button-resource.component";
+import { ResourceFormComponent } from '../../../components/forms/resource-form/resource-form.component';
+import { ResourceComponent } from "../../resources/resource/resource.component";
 import { ResourceService } from '../../../core/services/resource/resource.service';
 import { catchError } from 'rxjs';
 import { ModuleService } from '../../../core/services/module/module.service';

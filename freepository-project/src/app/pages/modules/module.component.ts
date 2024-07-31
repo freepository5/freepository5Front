@@ -2,11 +2,12 @@
 import {  inject, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../../../layout/header/header.component";
-import { ButtonModuleComponent } from "../../../components/button/button-module/button-module.component";
-import { ModuleFormComponent } from "../../../components/forms/module-form/module-form.component";
-import { ModuleService } from '../../../core/services/module/module.service';
-import { Module } from '../../../shared/models/module';
+import { ModuleService } from '../../core/services/module/module.service';
+import { Module } from '../../shared/models/module';
+import { HeaderComponent } from '../../layout/header/header.component';
+import { ButtonModuleComponent } from '../../components/button/button-module/button-module.component';
+import { ModuleFormComponent } from '../../components/forms/module-form/module-form.component';
+
 
 @Component({
   selector: 'app-module',
