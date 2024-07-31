@@ -12,4 +12,6 @@ import { HeaderComponent } from '../../layout/header/header.component';
 })
 export class HomeComponent {
 
+name=sessionStorage.getItem('UserName')
+
 }

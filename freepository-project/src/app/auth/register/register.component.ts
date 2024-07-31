@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
           console.log(response);
           this.authService.saveUserId(response.id)
           this.authService.saveToken(response.token);
-          // window.location.reload();
+          window.location.reload();
         },
         error:(error)=>{
           console.error('Error during register',error);

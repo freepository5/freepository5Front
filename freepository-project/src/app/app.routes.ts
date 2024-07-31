@@ -13,28 +13,30 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ResourceDetailComponent } from './pages/resources/resource-detail/resource-detail.component';
 import { ResourceComponent } from './pages/resources/resource/resource.component';
 import { ModuleDetailComponent } from './components/details/module-detail/module-detail.component';
+import { GuardService } from './core/services/guard/guard.service';
 
 
 export const routes: Routes = [
     {path:'',
         component:LayoutComponent,
         children:[
-            {path:'register', component:RegisterComponent},
+            
+            {path:'register', component:RegisterComponent,},
             {path:'home', redirectTo:'' },
-            {path:'', component:HomeComponent,  },
-            {path:'programs',component:ProgramsComponent,},
-            {path:'programs',component:ProgramsListComponent},
-            {path:'promotions',component:PromotionsComponent},
-            {path:'promotions', component:PromotionsListComponent},
-            {path:'modules', component:ModuleComponent},
-            {path: 'module-form', component:ModuleFormComponent},
-            {path: 'module-detail/:id', component:ModuleDetailComponent},
-            {path:'resources', component:ResourceComponent},
-            {path: 'roadmap-form', component:RoadmapFormComponent},
-            {path: 'resource-form', component: ResourceFormComponent},
-            {path: 'register',component: RegisterComponent,},
-            {path:'resource-detail',component:ResourceDetailComponent,},
-            {path: 'resource-detail/:id', component: ResourceDetailComponent },
+            {path:'', component:HomeComponent,  canActivate: [GuardService]},
+            {path:'programs',component:ProgramsComponent, canActivate: [GuardService]},
+            {path:'programs',component:ProgramsListComponent, canActivate: [GuardService]},
+            {path:'promotions',component:PromotionsComponent, canActivate: [GuardService]},
+            {path:'promotions', component:PromotionsListComponent, canActivate: [GuardService]},
+            {path:'modules', component:ModuleComponent, canActivate: [GuardService]},
+            {path: 'module-form', component:ModuleFormComponent, canActivate: [GuardService]},
+            {path: 'module-detail/:id', component:ModuleDetailComponent, canActivate: [GuardService]},
+            {path:'resources', component:ResourceComponent, canActivate: [GuardService]},
+            {path: 'roadmap-form', component:RoadmapFormComponent, canActivate: [GuardService]},
+            {path: 'resource-form', component: ResourceFormComponent, canActivate: [GuardService]},
+            {path: 'register',component: RegisterComponent, canActivate: [GuardService]},
+            {path:'resource-detail',component:ResourceDetailComponent, canActivate: [GuardService]},
+            {path: 'resource-detail/:id', component: ResourceDetailComponent, canActivate: [GuardService] },
         ]
     }
 ];

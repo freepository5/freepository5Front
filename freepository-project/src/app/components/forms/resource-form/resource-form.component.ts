@@ -33,11 +33,12 @@ export class ResourceFormComponent {
     if (userId) {
       this.resource.userId = userId;
       if (this.isValidResource(this.resource)) {
+        const tagIdsnum : number[] = this.resource.tagIds.map(str=>Number(str));
+        this.resource.tagIds = tagIdsnum
         this.resourceService.addResource(this.resource).subscribe(
           result => {
             console.log('Resource added successfully', result);
             this.resetForm();
-            // Redirigir o realizar alguna acción adicional
           },
           error => {
             console.error('Error adding resource', error);
@@ -51,7 +52,6 @@ export class ResourceFormComponent {
     } else {
       console.error('UserId not found in session storage');
       alert('User not logged in. Please log in and try again.');
-      // Opcional: redirigir a la página de inicio de sesión
       this.router.navigate(['/login']);
     }
   }
@@ -73,6 +73,7 @@ export class ResourceFormComponent {
       resource.description.trim() !== '' &&
       resource.moduleId > 0 &&
       resource.userId.trim() !== ''
+  
     );
   }
 }

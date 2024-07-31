@@ -9,6 +9,8 @@ import { ResourceFormComponent } from '../../forms/resource-form/resource-form.c
 import { ResourceComponent } from "../../../pages/resources/resource/resource.component";
 import { ResourceService } from '../../../core/services/resource/resource.service';
 import { catchError } from 'rxjs';
+import { ModuleService } from '../../../core/services/module/module.service';
+import { ModuleDetailService } from '../../../core/services/module-detail/module-detail.service';
 
 @Component({
   selector: 'app-module-detail',
@@ -18,7 +20,8 @@ import { catchError } from 'rxjs';
   styleUrl: './module-detail.component.scss'
 })
 export class ModuleDetailComponent implements OnInit {
-  moduleService = inject(ResourceService)
+  
+  moduleService = inject(ModuleDetailService)
   route = inject(ActivatedRoute)
 
   itemId!: string;
@@ -36,9 +39,11 @@ export class ModuleDetailComponent implements OnInit {
   }
 
 llenarModule(){
-  this.moduleService.getResourcesByModuleId(+this.itemId).subscribe(
+  this.moduleService.getModuleById(this.itemId).subscribe(
     (module) =>{
+      console.log(this.module)
       this.module = module;
+      console.log(this.module)
     }
   );
 }

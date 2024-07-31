@@ -36,8 +36,9 @@ Submit(): void {
     this.authService.login(user).subscribe({
       next: (response) => {
         console.log(response);
-        this.authService.saveUserId(response.id); // Guarda el userId
+        this.authService.saveUserId(response.id);
         this.authService.saveToken(response.token);
+        sessionStorage.setItem('UserName',this.loginForm.controls["UserName"].value)
         this.router.navigate(['/home']);
       },
       error: (error) => {
