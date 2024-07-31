@@ -1,12 +1,23 @@
-<form>
-    <header>
-        <nav>
-            <h3>Agregar título</h3>
-            <button><img src="../../../../assets/icons8-close-button-32.png" alt="Close button"/></button>
-        </nav>
-        <hr>
-    </header>
-    <input class="writeInput" type="text" placeholder="Escribe aquí el titulo del módulo"/>
-    <input class="submitInput" type="submit" value="Guardar"/>
+<!-- Modal -->
+<form [formGroup]="moduleForm" (ngSubmit)="onSubmit()">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modalHeader">
+          <label for="moduleTitle" class="form-label">Título del módulo</label>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modalBody">
+          <div class="mb-3">
+            <input type="text" id="moduleTitle" formControlName="title" class="form-control" placeholder="ej: Frontend con Angular">
+          </div>
+        </div>
+        <div class="modalFooter">
+          <button type="submit" class="btn btn-primary" [disabled]="moduleForm.invalid" data-bs-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
+
 

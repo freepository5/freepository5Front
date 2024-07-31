@@ -22,7 +22,7 @@ export class BootcampListComponent {
     title: "Inteligencia Artificial"
   }, {
     type: "BOOTCAMP",
-    title: "Inteligencia Artificial"
+    title: "Cloud Services"
   }];
 
 }

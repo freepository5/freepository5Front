@@ -1,0 +1,18 @@
+<app-header></app-header>
+<main>
+        <section class="titleBox">
+            <h4>Full Stack</h4>
+            <h2>BCN Singulars P2</h2>
+        </section>	
+<hr>
+        <section class="boxes">
+        @for (module of modules; track $index) {
+            <a [routerLink]="['/module-detail', module.id]">
+                <h5 class="cardTitle">{{ module.title }}</h5>
+            </a>
+        }
+        </section>
+</main>
+
+<app-module-form></app-module-form>
+<app-button-module></app-button-module>

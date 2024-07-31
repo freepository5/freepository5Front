@@ -1,0 +1,7 @@
+           @for(data of data;track $index){
+        <a [routerLink]="['/resource-detail', data.id]">
+            <h1>{{data.title}}</h1>
+            <h4>{{data.tags}}</h4>
+        </a>
+        }   
+   
